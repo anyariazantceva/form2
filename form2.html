@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet"> 
+    <title>Document</title>
+    <style>
+        *,*::before,*::after {
+			box-sizing: border-box;
+		}
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 96rem;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo_image {
+            display: block;
+            width: 20rem;
+            padding: 3rem 0;
+        }
+        .form {
+            background: #fff;
+        }
+
+        .form_fieldset {
+            margin: 0 0 1rem;
+            padding: 0;
+            border: 0;
+            min-width: 0;
+        }
+
+        .form_legend {
+            width: 100%;
+            font-size: 4rem;
+            text-align: center;
+            letter-spacing: -0.2rem;
+            margin-bottom: 6.25%;
+            
+        }
+
+        .main_form {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .form_group {
+            width: 46.875%;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .username {
+            position: absolute;
+            top: 2rem;
+        }
+
+        .form_label {
+			opacity: 0;
+			position: absolute;
+			z-index: -1;
+		}
+
+        .form_control {
+            display: block;
+            width: 100%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #eee;
+            padding: 1rem 3rem 0;
+            overflow: auto;
+            font-family: inherit;
+            line-height: 1;
+            font-size: 1.4rem;
+            max-width: 100%;
+        }
+
+        .form_control:hover {
+            border-color: #bebebe;
+        }
+
+        .form_control:focus {
+            border-color: black;
+        }
+
+        .form_link {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .innerLink {
+            text-decoration: none;
+            color: #2cbafc;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .form_actions {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            vertical-align: baseline;
+            font-family: inherit;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            background: transparent;
+            border: 0.1rem solid transparent;
+            color: inherit;
+            text-decoration: none;
+            outline: none;
+            padding: 1rem 2rem;
+            user-select: none;
+            cursor: pointer;
+            border-radius: 2rem;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            
+        }
+
+        .btn:hover {
+            box-shadow: 0 1.4rem 2.8rem rgba(0,0,0,0.25), 0 1rem 1rem rgba(0,0,0,0.22);
+        }
+
+        .btn:focus {
+            box-shadow: 0 1.4rem 2.8rem rgba(0,0,0,0.25), 0 1rem 1rem rgba(0,0,0,0.22);
+        }
+
+        .btn:active {
+            transform: translateY(0.3rem);
+        }
+
+        .btnEnter {
+            background-color: #74c53d;
+            width: 20%;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .text {
+            display: block;
+            font-size: 1.2rem;
+            padding: 2rem 0;
+            color: #717070b3;
+
+        }
+
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 38%;
+            
+        }
+        .btn-link {
+            font-size: 1.1rem;
+            padding: 0.5rem 2rem;
+            border: 1px solid #275be7;
+            font-weight: bold;
+           
+        }
+        .facebook {
+            border-color: #275be7;
+            color: #275be7;
+            
+        }
+
+        .google {
+            border-color: #f36350;
+            color: #f36350;
+        }
+
+        .office {
+            border-color: #f36350;
+            color: #f36350;
+        }
+
+        .down_text {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            html {
+                font-size: 55%;
+            }
+
+            .partners {
+                width: 50%;
+            }
+
+            .btn-link {
+                width: 100%;
+            }
+
+            @media screen and (max-width: 650px) {
+
+                html {
+                    font-size: 45%;
+                }
+
+                .form_group {
+                    width: 100%;
+                }
+
+                .btnEnter {
+                    width: 100%;
+                }
+
+                .btn-link {
+                    width: 100%;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img class="logo_image" src="clickmeeting-logo.png" alt="image">
+        </div>
+
+        <form class="form">
+            <fieldset class="form_fieldset">
+                <legend class="form_legend">Войдите в учетную запись</legend>
+                <div class="main_form">
+                    <div class="form_group">
+                        <label class="form_label " for="username"></label>
+                        <span class="username"><img src="icon-plane.png" alt=""></span>
+                        <input class="form_control" type="text" id="username" placeholder="Имя пользователя или адрес эл.почты">
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label password" for="password"></label>
+                        <span class="username"><img src="icon-key.png" alt=""></span>
+                        <input class="form_control" type="text" id="password" placeholder="Пароль">
+                    </div>
+                </div>
+                <div class="form_link"><a class="innerLink" href="#">Забыли пароль?</a></div>
+
+                <div class="form_actions">
+                    <button class="btn btnEnter">Вход</button>
+                    <span class="text">или зарегистрируйтесь через</span>
+                    <div class="partners">
+                        <button class="btn btn-link facebook">facebook</button>
+                        <button class="btn btn-link google">google</button>
+                        <button class="btn btn-link office">office 365</button>
+                    </div>
+                </div>
+                <span class="text down_text">Нет учетной записи?<a class="innerLink" href="#"> Воспользуйтесь бесплатной 30-дневной пробной версией!</a></span>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
